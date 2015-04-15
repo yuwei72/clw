@@ -1,0 +1,84 @@
+@mixin container($width:960px){
+	width: $width;
+  	margin: 0 auto;
+}
+
+body{
+	font-family: Microsoft YaHei;
+	font-size: 14px;
+	width: 100%;
+	background-color:#fff;
+}
+
+a{
+	text-decoration: none;
+}
+
+@mixin border-radius($radius:6px){
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+
+@mixin border-radius-top($radius:6px){
+	border-top-left-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	-moz-border-top-left-radius: $radius;
+	-o-border-top-left-radius: $radius;
+	-ms-border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+	-webkit-border-top-right-radius: $radius;
+	-moz-border-top-right-radius: $radius;
+	-o-border-top-right-radius: $radius;
+	-ms-border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius:6px){
+	border-bottom-left-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	-moz-border-bottom-left-radius: $radius;
+	-o-border-bottom-left-radius: $radius;
+	-ms-border-bottom-left-radius: $radius;
+	border-bottom-right-radius: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+	-moz-border-bottom-right-radius: $radius;
+	-o-border-bottom-right-radius: $radius;
+	-ms-border-bottom-right-radius: $radius;
+}
+
+@mixin text-shadow($shadow...){
+	text-shadow: $shadow;
+	-webkit-text-shadow: $shadow;
+	-moz-text-shadow: $shadow;
+	-o-text-shadow: $shadow;
+	-ms-text-shadow: $shadow;
+}
+
+@mixin box-shadow($shadow...){
+	box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	-ms-box-shadow: $shadow;
+}
+
+@mixin transition($transition:.3s){
+	box-transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+}
+
+@mixin opacity( $opacity:.5){
+	box-opacity: $opacity;
+	-webkit-opacity: $opacity;
+	-moz-opacity: $opacity;
+	-o-opacity: $opacity;
+	-ms-opacity: $opacity;
+}
+
+.clear:after{content :'';display :block; clear:both;}
+.clear{zoom :1;}

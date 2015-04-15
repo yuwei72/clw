@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>湖北成龙威汽车服务公司</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= params[:controller] + '-' + params[:action] %>">
+
+	<div class="header">
+		<div class="nav">
+			<img src="<%= image_url "logo.png" %>" alt="成龙威汽车服务LOGO">
+			<ul class="clear">
+				<li>
+					<a href="/">首页</a>
+				</li>
+				<li>
+					<a href="#">公司介绍</a>
+				</li>
+				<li>
+					<a href="/productList">产品中心</a>
+				</li>
+				<li>
+					<a href="#">新闻报道</a>
+					<div class="child-area">
+						<a href="#">行业新闻</a>
+						<a href="#">公司动态</a>
+						<a href="#">技术指导</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">关于我们</a>
+					<div class="child-area">
+						<a href="#">联系我们</a>
+						<a href="#">购车售后</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<%= yield %>
+
+	<div class="footer">
+		<div class="footer-area">
+			<div class="footer-top">
+				<ul>
+					<li><a href="#">洒水车</a></li>
+					<li><a href="#">垃圾车</a></li>
+				</ul>
+			</div>
+			<div class="footer-bottom">
+				<p><span>VIP热线：18610948993</span><span>电子邮箱：18610948993@sina.cn</span><span>办公座机：0722-3308086</span></p>
+				<p>&copy; 2014 clwqcfw All rights reserved </p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.nav li').hover(function(){
+				$(this).children('.child-area').slideToggle();
+			},function(){
+				$(this).children('.child-area').slideToggle();
+			});
+		});
+	</script>
+
+</body>
+</html>
